@@ -1,0 +1,12 @@
+{
+  "selected_model": "XGB_keep",
+  "selection_rule": "within 0.1% of minimum validation RMSE, then minimum inference time",
+  "test_rmse_reduction_vs_linear": 0.05049356396282084,
+  "bootstrap_95pct_ci": [
+    0.045770204307081674,
+    0.055643206175501635
+  ],
+  "time_split": true,
+  "test_rows": 15000,
+  "training_outlier_count": 1024
+}

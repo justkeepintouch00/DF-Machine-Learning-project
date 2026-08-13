@@ -1,0 +1,12 @@
+{
+  "chosen_preprocessing_for_k3": "log_robust",
+  "kmeans_k": 3,
+  "kmeans_silhouette": 0.39160509141777133,
+  "baseline_raw_standard_k3_silhouette": 0.24553439864585863,
+  "mean_pairwise_seed_ari": 0.9989171922104985,
+  "min_pairwise_seed_ari": 0.9981931262806264,
+  "pca_cluster_ari": 0.998321582230508,
+  "kmeans_vs_gmm_k3_ari": -0.035145313610249314,
+  "gmm_bic_selected_k": 6,
+  "note": "GMM membership probability is confidence, not accuracy"
+}

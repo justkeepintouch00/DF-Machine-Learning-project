@@ -1,0 +1,11 @@
+{
+  "selected_model": "Diverse_ensemble",
+  "selected_threshold": 0.425,
+  "test_f2_improvement_vs_rf_baseline": 0.42514415907470243,
+  "bootstrap_95pct_ci": [
+    0.41372825403778835,
+    0.43583298511259
+  ],
+  "selection_rule": "maximum validation F2",
+  "test_rows": 50736
+}

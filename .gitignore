@@ -1,0 +1,27 @@
+# Local environments and secrets
+.env
+.env.*
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Raw datasets are downloaded from Kaggle at runtime
+*.zip
+diabetes_012_health_indicators_BRFSS2015.csv
+diabetes_binary_5050split_health_indicators_BRFSS2015.csv
+diabetes_binary_health_indicators_BRFSS2015.csv
+starbucks_customer_ordering_patterns.csv
+CC GENERAL.csv
+
+# Local-only execution manifest and redundant drafts
+20260814_062642_manifest.json
+20260814_063422_README_GitHub초안.md
+20260814_063422_requirements.txt
+04_실행로그/
+
+# Row-level predictions/assignments are kept locally; aggregate evidence is versioned
+03_실험결과/classification_test_predictions.csv
+03_실험결과/regression_test_predictions.csv
+03_실험결과/unsupervised_customer_segments.csv
