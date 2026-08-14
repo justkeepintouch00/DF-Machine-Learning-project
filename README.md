@@ -10,7 +10,7 @@
 - 기여자: 원가형
 - 재현 실험: 2026.08.14
 
-공개 저장소는 분류·회귀·비지도학습의 세 영역으로 나눴습니다. 각 폴더에는 재현 가능한 최종 노트북과 모델 선택 근거가 되는 집계 결과를 함께 제공합니다.
+공개 저장소는 분류·회귀·비지도학습의 세 영역으로 나눴습니다. 각 노트북은 **팀 프로젝트 당시 원본 셀·주석·출력을 앞부분에 그대로 유지**하고, 맨 아래 `추가 재현 실험 (2026-08-14)` 섹션에 검증 절차를 보완한 실험과 실행 결과를 덧붙였습니다. 별도의 원본 복제 폴더는 두지 않았습니다.
 
 ## 바로가기
 
@@ -18,6 +18,7 @@
 - [회귀 — 주문별 판매금액 예측](regression/sales_prediction.ipynb)
 - [비지도학습 — 신용카드 고객 세분화](unsupervised/credit_card_segmentation.ipynb)
 - [포트폴리오 최종 실험 보고서](docs/portfolio_report.md)
+- [1~7주차 발표자료](weekly-presentations/README.md)
 
 ## 핵심 결과
 
@@ -63,7 +64,7 @@ Accuracy와 Precision이 낮아지고 FP가 증가했으므로 전반적인 성�
 | XGB+LGBM 유지 | **0.9216** | 0.9287 | 0.9715 |
 | XGBoost 훈련 이상치 제거 | 0.9993 | 0.9975 | 0.9671 |
 
-앙상블의 검증 RMSE 우위는 0.0108%에 불과하고 측정된 추론시간은 XGBoost보다 약 4.60배 길었습니다. 따라서 `최저 검증 RMSE의 0.1% 이내 후보 중 추론시간 최소` 규칙으로 XGBoost를 선택했습니다.
+앙상블의 검증 RMSE 우위는 0.0108%에 불과하고 이번 재실행에서 측정된 추론시간은 XGBoost보다 약 4.11배 길었습니다. 따라서 `최저 검증 RMSE의 0.1% 이내 후보 중 추론시간 최소` 규칙으로 XGBoost를 선택했습니다.
 
 ## 3. 비지도학습 — 신용카드 고객 세분화
 
@@ -82,6 +83,23 @@ Accuracy와 Precision이 낮아지고 FP가 증가했으므로 전반적인 성�
 
 위 액션은 데이터에서 도출한 가설입니다. 실제 효과는 캠페인 A/B 테스트의 재구매율, 전환율, 증분 매출로 검증해야 합니다.
 
+
+## 주차별 발표 기록
+
+매주 발표한 PPT의 PDF 원본을 `weekly-presentations`에 보존했습니다. PDF 내용은 수정하지 않았으며, 파일명 기준으로 1~7주차 순서를 부여했습니다.
+
+| 주차 | 발표자료 | 페이지 | 주요 내용 |
+|---:|---|---:|---|
+| 1 | [지도학습 데이터·문제 정의](weekly-presentations/week-01_supervised-learning.pdf) | 6 | 분류·회귀 데이터셋 선정과 클래스 불균형 확인 |
+| 2 | [지도학습 2회차](weekly-presentations/week-02_supervised-learning.pdf) | 13 | 전처리·모델링 진행 과정 |
+| 3 | [지도학습 3회차](weekly-presentations/week-03_supervised-learning.pdf) | 21 | 분류·회귀 실험 확장 |
+| 4 | [분류·회귀 프로젝트](weekly-presentations/week-04_classification-regression-project.pdf) | 15 | 문제 정의, 데이터 분석, 모델 비교 |
+| 5 | [분류 프로젝트](weekly-presentations/week-05_classification-project.pdf) | 12 | 임계값 조정과 FN/FP 분석 |
+| 6 | [회귀 프로젝트](weekly-presentations/week-06_regression-project.pdf) | 12 | 회귀 모델 비교와 성능 개선 과정 |
+| 7 | [신용카드 고객 세분화](weekly-presentations/week-07_customer-segmentation.pdf) | 11 | PCA·KMeans·GMM과 비즈니스 세그먼트 |
+
+> 일부 PDF의 내부 주차 표기와 원본 파일명이 일치하지 않는 경우가 있어, 저장소의 주차 번호는 전달받은 파일 순서를 기준으로 정리했습니다.
+
 ## 프로젝트 구조
 
 ```text
@@ -94,6 +112,7 @@ regression/
 unsupervised/
 ├── credit_card_segmentation.ipynb
 └── results/                 # 군집 후보·프로파일·비즈니스 가설
+weekly-presentations/        # 1~7주차 발표 PDF 원본
 docs/
 └── portfolio_report.md
 DATA_SOURCES.md
