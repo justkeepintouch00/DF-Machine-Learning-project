@@ -10,6 +10,14 @@
 - 기여자: 원가형
 - 재현 실험: 2026.08.14
 
+공개 저장소는 분류·회귀·비지도학습의 세 영역으로 나눴습니다. 각 폴더에는 재현 가능한 최종 노트북과 모델 선택 근거가 되는 집계 결과를 함께 제공합니다.
+
+## 바로가기
+
+- [분류 — 당뇨병 위험군 탐지](classification/diabetes_classification.ipynb)
+- [회귀 — 주문별 판매금액 예측](regression/sales_prediction.ipynb)
+- [비지도학습 — 신용카드 고객 세분화](unsupervised/credit_card_segmentation.ipynb)
+- [포트폴리오 최종 실험 보고서](docs/portfolio_report.md)
 
 ## 핵심 결과
 
@@ -77,10 +85,17 @@ Accuracy와 Precision이 낮아지고 FP가 증가했으므로 전반적인 성�
 ## 프로젝트 구조
 
 ```text
-01_원본보관/             # Colab 탐색 실험과 기존 출력 보존
-02_실행완료_노트북/      # 검증 절차를 보완하고 끝까지 실행한 노트북
-03_실험결과/             # 모델 비교표, 요약 JSON, 고객군 프로파일
-20260814_*_최종실험보고서.md
+classification/
+├── diabetes_classification.ipynb
+└── results/                 # 모델 비교표와 최종 요약
+regression/
+├── sales_prediction.ipynb
+└── results/                 # 이상치 유지/제거 비교와 최종 요약
+unsupervised/
+├── credit_card_segmentation.ipynb
+└── results/                 # 군집 후보·프로파일·비즈니스 가설
+docs/
+└── portfolio_report.md
 DATA_SOURCES.md
 requirements.txt
 ```
@@ -100,7 +115,7 @@ requirements.txt
 python -m pip install -r requirements.txt
 ```
 
-`02_실행완료_노트북`의 노트북을 열어 `Restart & Run All`을 실행합니다. 공개 Kaggle 데이터는 KaggleHub를 통해 자동으로 다운로드됩니다.
+저장소 루트에서 Jupyter를 실행한 뒤 각 영역의 노트북을 열어 `Restart & Run All`을 실행합니다. 공개 Kaggle 데이터는 KaggleHub를 통해 자동으로 다운로드됩니다.
 
 ## 한계
 
