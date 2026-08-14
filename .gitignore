@@ -22,6 +22,4 @@ CC GENERAL.csv
 04_실행로그/
 
 # Row-level predictions/assignments are kept locally; aggregate evidence is versioned
-03_실험결과/classification_test_predictions.csv
-03_실험결과/regression_test_predictions.csv
-03_실험결과/unsupervised_customer_segments.csv
+.local_artifacts/
